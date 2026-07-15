@@ -1,0 +1,11 @@
+.search-container{
+    display:flex;
+    justify-content:center;
+    margin:30px;
+}
+
+.search-container input{
+    width:400px;
+    padding:12px;
+    font-size:16px;
+}
