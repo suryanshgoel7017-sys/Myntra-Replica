@@ -1,9 +1,9 @@
+import { Link } from "react-router-dom";
 import "./../styles/ProductCard.css";
 
 function ProductCard({ product }) {
   return (
     <div className="product-card">
-
       <img src={product.image} alt={product.name} />
 
       <h3>{product.brand}</h3>
@@ -16,9 +16,15 @@ function ProductCard({ product }) {
 
       <div className="btn-group">
         <button>Add to Cart</button>
+
         <button>❤</button>
       </div>
 
+      <Link to={`/product/${product.id}`}>
+        <button className="view-btn">
+          View Details
+        </button>
+      </Link>
     </div>
   );
 }

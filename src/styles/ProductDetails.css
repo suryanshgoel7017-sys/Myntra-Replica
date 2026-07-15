@@ -1,0 +1,33 @@
+.details{
+    display:flex;
+    gap:40px;
+    padding:50px;
+    align-items:center;
+}
+
+.details img{
+    width:350px;
+    border-radius:10px;
+}
+
+.details button{
+    margin-top:20px;
+    padding:12px 25px;
+    background:#ff3f6c;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+
+.details{
+    flex-direction:column;
+}
+
+.details img{
+    width:100%;
+}
+
+}
