@@ -1,7 +1,12 @@
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
-import "./../styles/ProductCard.css";
+import "../styles/ProductCard.css";
+
 
 function ProductCard({ product }) {
+  const { addToCart } = useContext(CartContext);
+
   return (
     <div className="product-card">
       <img src={product.image} alt={product.name} />
@@ -12,18 +17,12 @@ function ProductCard({ product }) {
 
       <h4>₹ {product.price}</h4>
 
-      <span>⭐ {product.rating}</span>
-
-      <div className="btn-group">
-        <button>Add to Cart</button>
-
-        <button>❤</button>
-      </div>
+      <button onClick={() => addToCart(product)}>
+        Add to Cart
+      </button>
 
       <Link to={`/product/${product.id}`}>
-        <button className="view-btn">
-          View Details
-        </button>
+        <button>View Details</button>
       </Link>
     </div>
   );
