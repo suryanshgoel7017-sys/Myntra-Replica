@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
 import ProductDetails from "../pages/ProductDetails";
+import Wishlist from "../pages/Wishlist";
 
 
 function AppRoutes() {
@@ -14,6 +15,7 @@ function AppRoutes() {
       <Route path="/signup" element={<Signup />} />
         <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/wishlist" element={<Wishlist />} />
     </Routes>
   );
 }

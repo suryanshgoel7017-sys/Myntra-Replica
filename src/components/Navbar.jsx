@@ -12,6 +12,10 @@ function Navbar() {
       <Link to="/cart">
         Cart ({cart.length})
       </Link>
+      <Link to="/wishlist">
+       
+        Wishlist
+      </Link>
     </nav>
   );
 }
